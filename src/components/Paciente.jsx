@@ -36,6 +36,7 @@ const Paciente = ({paciente, setPaciente, eliminarPaciente}) => {
             <p className="font-bold mb-3 text-gray-700 uppercase"> 
                 Symptoms:
                 <span className="ml-1 font-normal normal-case">{sintomas}</span>
+                
             </p>
 
             <div className="flex justify-between mt-10">
