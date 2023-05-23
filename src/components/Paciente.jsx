@@ -4,7 +4,7 @@ const Paciente = ({paciente, setPaciente, eliminarPaciente}) => {
     const { nombre, propietario, email, fecha, sintomas, id } =  paciente;
 
     const handleEliminar = () => {
-        const respuesta =  confirm('Deseas eliminar este registro?');
+        const respuesta =  confirm('Do you really want to delete this record?');
 
         if(respuesta) {
             eliminarPaciente(id);
@@ -14,12 +14,12 @@ const Paciente = ({paciente, setPaciente, eliminarPaciente}) => {
     return (
         <div className="mt-10 mx-5 bg-white px-5 py-10 shadow-md rounded-xl">
             <p className="font-bold mb-3 text-gray-700 uppercase"> 
-                Nombre:
+                Name:
                 <span className="ml-1 font-normal normal-case">{nombre}</span>
             </p>
 
             <p className="font-bold mb-3 text-gray-700 uppercase"> 
-                Propietario:
+                Owner:
                 <span className="ml-1 font-normal normal-case">{propietario}</span>
             </p>
 
@@ -29,12 +29,12 @@ const Paciente = ({paciente, setPaciente, eliminarPaciente}) => {
             </p>
 
             <p className="font-bold mb-3 text-gray-700 uppercase"> 
-                Fecha Alta:
+                Discharge date:
                 <span className="ml-1 font-normal normal-case">{fecha}</span>
             </p>
 
             <p className="font-bold mb-3 text-gray-700 uppercase"> 
-                Síntomas:
+                Symptoms:
                 <span className="ml-1 font-normal normal-case">{sintomas}</span>
             </p>
 
@@ -45,7 +45,7 @@ const Paciente = ({paciente, setPaciente, eliminarPaciente}) => {
                     text-white font-bold uppercase rounded-lg"
                     onClick={() => setPaciente(paciente)}
                 >
-                    Editar
+                    Edit
                 </button>
 
                 <button 
@@ -54,7 +54,7 @@ const Paciente = ({paciente, setPaciente, eliminarPaciente}) => {
                     text-white font-bold uppercase rounded-lg"
                     onClick={handleEliminar}
                 >
-                    Eliminar
+                    Delete
                 </button>
             </div>
         </div>
